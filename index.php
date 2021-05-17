@@ -11,15 +11,19 @@
 <body>
 <h1>POKEDEX - PHP STYLE</h1>
 
+<section id="search-box" class="section">
 <form action="">
     <label>
         Search for a pokemon!
+        <br>
         <input type="text" name="pokemon">
     </label>
+    <br>
     <button type="submit">Search POKéDEX</button>
 </form>
-<br>
-<section id="pokemon-stats">
+</section>
+
+<section id="pokemon-stats" class="section">
     <?php
         $pokemon_name = '';
         $pokemon_id = '';
@@ -44,7 +48,20 @@
     ?>
     <h2><?php echo $pokemon_name ?></h2>
     <h2><?php echo $pokemon_id ?></h2>
-    <h2><?php echo $pokemon_evolutions['evolves_from_species']['name'] ?></h2>
+    <h2>
+        <?php
+            if($pokemon_evolutions['evolves_from_species'] === null){
+                echo 'This pokemon has no previous form';
+            }else{
+                echo 'The previous form of this pokemon is ' . $pokemon_evolutions['evolves_from_species']['name'];
+            }?>
+    </h2>
+    <ul>
+        <li><?php echo $pokemonStats['moves'][0]['move']['name'] ?></li>
+        <li><?php echo $pokemonStats['moves'][1]['move']['name'] ?></li>
+        <li><?php echo $pokemonStats['moves'][2]['move']['name'] ?></li>
+        <li><?php echo $pokemonStats['moves'][3]['move']['name'] ?></li>
+    </ul>
     <img src='<?php echo $pokemon_image ?>' width=200 alt="Image of currently searched pokemon">
 </section>
 
