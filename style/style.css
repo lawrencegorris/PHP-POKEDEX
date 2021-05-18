@@ -1,22 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: 'Press Start 2P', cursive;
 }
 
 body {
-    background-color: mintcream;
+    position: relative;
+    background-image: url(/assets/pixel-art-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left;
     width: 100%;
     height: 100vh;
 }
 
 h1 {
     text-align: center;
-}
-
-h2 {
-    text-align: center;
+    margin-top: 25px;
 }
 
 #search-box {
@@ -26,6 +29,22 @@ h2 {
     margin: 25px auto;
 }
 
+input, button {
+    margin-top: 15px;
+    padding: 15px;
+    width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: mintcream;
+    border: none;
+}
+
+button:hover {
+    background-color: #cc0000;
+    color: mintcream;
+    cursor: pointer;
+}
+
 section {
     display: block;
     margin: 0 auto;
@@ -33,6 +52,58 @@ section {
     text-align: center;
 }
 
-ul {
+#pokemon-stats {
+    padding: 25px;
+    left: 400px;
+    background-color: mintcream;
+    width: 350px;
+    height: 600px;
+    border-radius: 25px;
+}
+
+#pokemon-name{
+    text-align: left;
+}
+
+#pokemon-id {
+    text-align: left;
+}
+
+#pokemon-type-id {
+    display: flex;
+    font-size: 14px;
+}
+
+#types {
+    width: 220px;
+    display: flex;
     list-style: none;
+}
+
+#types li {
+    text-align: left;
+    width: 100px;
+    font-size: 14px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+#moves {
+    width: 175px;
+    margin-top: 25px;
+    text-align: left;
+}
+
+#moves li {
+    list-style: none;
+    font-size: 14px;
+    margin: 15px 0 0 15px;
 }
