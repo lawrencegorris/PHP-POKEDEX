@@ -52,13 +52,19 @@ section {
     text-align: center;
 }
 
-#pokemon-stats {
+#pokemon-info {
     padding: 25px;
-    left: 400px;
     background-color: mintcream;
-    width: 350px;
+    width: 960px;
     height: 600px;
     border-radius: 25px;
+    display: flex;
+    text-align: left;
+}
+
+.stat-block {
+    width: 300px;
+    margin: 0 10px;
 }
 
 #pokemon-name{
@@ -93,12 +99,13 @@ img {
 }
 
 h3 {
+    text-align: left;
     font-size: 14px;
 }
 
 #moves {
     width: 175px;
-    margin-top: 25px;
+    margin-top: 50px;
     text-align: left;
 }
 
@@ -106,4 +113,13 @@ h3 {
     list-style: none;
     font-size: 14px;
     margin: 15px 0 0 15px;
+}
+
+.stat {
+    display: flex;
+    margin-top: 15px;
+}
+
+#shiny-version {
+    margin-top: 15px;
 }
